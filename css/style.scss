@@ -1,3 +1,4 @@
+@import "./mixins";
 $taille-police: (corps:0.9em, grostitre:6em, moyentitre:1.1em);
 
 body {
@@ -9,20 +10,12 @@ header {
     position: relative;
     left: 50%;
 }
-@mixin mobile-first {
-    @media screen and (max-width: 800px) {
-    @content
-}
-}
-@mixin tablet-second {
-    @media screen and (max-width: 600px) {
-        background-color: aqua;
-    @content
-    
-}
 
-}
+
+
 h1 {
+    display: block;
+    text-align: center;
     font-size: map-get($map:$taille-police, $key:grostitre);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     @include mobile-first {
@@ -35,5 +28,8 @@ h1 {
         color: gold;
     }
 
-
+}
+p {
+     @include configtxt(green, 3em, 50%);
+     text-align: center;
 }

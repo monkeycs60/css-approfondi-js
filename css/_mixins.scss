@@ -1,0 +1,19 @@
+@mixin mobile-first {
+    @media screen and (max-width: 800px) {
+    @content
+}
+}
+@mixin tablet-second {
+    @media screen and (max-width: 600px) {
+        background-color: aqua;
+    @content
+    }
+    
+}
+@mixin configtxt ($color, $size, $radius) {
+    background-color: $color;
+    font-size: $size;
+    border: 50px solid blue;
+    border-radius: $radius;
+    
+}
