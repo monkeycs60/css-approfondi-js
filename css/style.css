@@ -1,8 +1,32 @@
 body {
-  color: blue;
+  width: 80%;
+  height: 70%;
+  font-size: 0.9em;
+}
+
+header {
+  position: relative;
+  left: 50%;
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 6em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 2em;
+    color: yellowgreen;
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    background-color: aqua;
+    text-decoration: underline;
+    color: gold;
+  }
 }
 /*# sourceMappingURL=style.css.map */

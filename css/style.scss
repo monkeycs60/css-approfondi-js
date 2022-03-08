@@ -1,6 +1,39 @@
+$taille-police: (corps:0.9em, grostitre:6em, moyentitre:1.1em);
+
 body {
-    color: blue;
+    width: 80%;
+    height: 70%;
+font-size: map-get($map:$taille-police, $key:corps);
+}
+header {
+    position: relative;
+    left: 50%;
+}
+@mixin mobile-first {
+    @media screen and (max-width: 800px) {
+    @content
+}
+}
+@mixin tablet-second {
+    @media screen and (max-width: 600px) {
+        background-color: aqua;
+    @content
+    
+}
+
 }
 h1 {
-    font-size: 5em;
+    font-size: map-get($map:$taille-police, $key:grostitre);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    @include mobile-first {
+        font-size: 2em;
+        color: yellowgreen;
+        background-color: red;
+    }
+    @include tablet-second {
+        text-decoration: underline;
+        color: gold;
+    }
+
+
 }
