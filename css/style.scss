@@ -12,7 +12,7 @@ header {
     border-radius: 1%;
     background-color: rgb(241, 114, 100);
     color: blueviolet;
-    color-adjust: ;
+   
    
 }
 
@@ -42,4 +42,10 @@ p {
 h2 {
     @extend p;
     text-decoration: underline;
+}
+h3 {
+    color: violet;
+    background-color: violet;   
+    text-overflow: hidden;
+    border: 10px solid violet;
 }
