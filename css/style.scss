@@ -16,6 +16,7 @@ header {
 
 
 
+
 h1 {
     background-color: yellow;
     display: block;
@@ -41,4 +42,9 @@ h2 {
     @extend p;
     text-decoration: underline;
 }
-
+h3 {
+    color: violet;
+    background-color: violet;   
+    text-overflow: hidden;
+    border: 10px solid violet;
+}
