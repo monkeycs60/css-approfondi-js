@@ -1,5 +1,4 @@
 @import "./mixins";
-$taille-police: (corps:0.9em, grostitre:6em, moyentitre:1.1em);
 
 body {
     width: 80%;
@@ -7,13 +6,14 @@ body {
 font-size: map-get($map:$taille-police, $key:corps);
 }
 header {
-    position: relative;
-    left: 50%;
+    
+   
 }
 
 
 
 h1 {
+    background-color: yellow;
     display: block;
     text-align: center;
     font-size: map-get($map:$taille-police, $key:grostitre);
@@ -32,4 +32,8 @@ h1 {
 p {
      @include configtxt(green, 3em, 50%);
      text-align: center;
+}
+h2 {
+    @extend p;
+    text-decoration: underline;
 }
