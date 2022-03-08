@@ -5,11 +5,11 @@ body {
 }
 
 header {
-  position: relative;
-  left: 50%;
+  text-shadow: 10px 5px blue;
 }
 
 h1 {
+  background-color: yellow;
   display: block;
   text-align: center;
   font-size: 6em;
@@ -32,11 +32,15 @@ h1 {
   }
 }
 
-p {
+p, h2 {
   background-color: green;
   font-size: 3em;
   border: 50px solid blue;
   border-radius: 50%;
   text-align: center;
+}
+
+h2 {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,5 @@
+$taille-police: (corps:0.9em, grostitre:6em, moyentitre:1.1em);
+
 @mixin mobile-first {
     @media screen and (max-width: 800px) {
     @content
@@ -15,5 +17,5 @@
     font-size: $size;
     border: 50px solid blue;
     border-radius: $radius;
-    
+     
 }
