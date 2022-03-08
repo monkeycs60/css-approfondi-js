@@ -8,7 +8,8 @@ font-size: map-get($map:$taille-police, $key:corps);
 }
 header {
     text-shadow: 10px 5px blue;
-    
+    border: 2px solid black;
+    border-radius: 1%;
    
 }
 
