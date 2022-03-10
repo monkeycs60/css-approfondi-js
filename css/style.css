@@ -8,8 +8,8 @@ header {
   text-shadow: 10px 5px blue;
   border: 2px solid black;
   border-radius: 1%;
-  background-color: #f17264;
-  color: blueviolet;
+  background-color: salmon;
+  color: orange;
 }
 
 h1 {
@@ -46,5 +46,12 @@ p, h2 {
 
 h2 {
   text-decoration: underline;
+}
+
+h3 {
+  color: violet;
+  background-color: violet;
+  text-overflow: hidden;
+  border: 10px solid violet;
 }
 /*# sourceMappingURL=style.css.map */
