@@ -17,4 +17,5 @@ function reveleZ(text) {
           }
 
      }
+}
      reveleZ("je suis une  bonne soeur ")
