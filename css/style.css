@@ -54,4 +54,14 @@ h3 {
   text-overflow: hidden;
   border: 10px solid violet;
 }
+
+.boutondemerde {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: red;
+  padding: 3em;
+  margin: auto;
+  margin-top: 10em;
+}
 /*# sourceMappingURL=style.css.map */
