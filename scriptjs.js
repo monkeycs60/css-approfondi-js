@@ -1,38 +1,43 @@
-function conversion(degCel) {
-
-    
-   if (typeof degCel == 'number') {
-    return (degCel * (9/5) + 32);
-   }
-   else {
-    return "Données en entrée non correctes."
-   }
-        
+function finSimilaire(str, fin) {
+   // const destructure = fin.split("");
+   // const longueurFin = destructure.length;
+    if (fin === str.slice(str.length - fin.length)) 
+    {
+       return "La fin est similaire";  
+    } 
+    else {
+       return "La fin ne correspond pas";
     }
 
 
+}
 
-console.log(conversion(-5));
+
+console.log(finSimilaire("jeanmich", "jeanmich"));
+
+
 
 
 
 
 // ----------------- ÉNONCÉ -----------------
 
-// Créer un algorithme qui sert à convertir des degrés Celsius
-// en degrés Fahrenheit.
-// Le résultat doit être de type nombre.
-// Si on donne un autre type qu'un nombre en argument, vous
-// devez retourner "Données en entrée non correctes."
-// Bonne Chance !
+// Créez un Algorithme qui vous informe si les lettres(second arguments),
+// correspondent à la fin du mot(premier argument).
+// Si elles correspondent, retournez "La fin est similaire"
+// Sinon "La fin ne correspond pas".
+
 
 // ----------------- CONSEILS -----------------
 
-// le calcul pour convertir les degrés Celsius en Fahrenheit
-// est : (degCel * (9/5) + 32);
 
-// Pour connaitre le type de notre argument on peut faire
-// console.log(typeof(5));  "number"
-// console.log(typeof("abc"));  "string"
-// etc ...
+// La fonction "slice" permet de découper une chaine de caractère.
+// Essayez cela : 
+// console.log("hello".slice(2));
 
+// La méthode length permet de donner la longueur d'une chaine.
+// Essayez cela :
+// console.log("hello".length);
+
+// Mais il y a des dizaines de façon de résoudre cet algorithme(et les autres...),
+// N'hésitez pas à le faire à votre façon et à TESTER vos idées(c'est important). 
