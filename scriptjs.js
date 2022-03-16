@@ -1,43 +1,61 @@
-function finSimilaire(str, fin) {
-   // const destructure = fin.split("");
-   // const longueurFin = destructure.length;
-    if (fin === str.slice(str.length - fin.length)) 
-    {
-       return "La fin est similaire";  
-    } 
-    else {
-       return "La fin ne correspond pas";
+function plusGrandNb(arr) {
+   const finalTab = [];
+   for (let index = 0; index < arr.length; index++) {
+    arr[index].sort((b, a) => a-b);
+   
+       
     }
-
-
+      
+    for (let numero = 0; numero < arr.length; numero++) {
+       finalTab.push(arr[numero][0])
+       
+      
+      
+      
+   }
+   
+   return finalTab
+   
+  
 }
 
 
-console.log(finSimilaire("jeanmich", "jeanmich"));
+
+console.log(plusGrandNb([
+   [1, 5, 8, 3],
+   [15, 47, 88, 26],
+   [32, 35, 37, 39],
+   [3000, 1001, 857, 1]
+ ]));
 
 
 
+
+// let tabounet = [
+//    [1, 5, 8, 3],
+//    [15, 47, 88, 26],
+//    [32, 35, 37, 39],
+//    [3000, 1001, 857, 1]
+//  ];
+ 
+
+//  console.log(tabounet[1].sort());
 
 
 
 // ----------------- ÉNONCÉ -----------------
 
-// Créez un Algorithme qui vous informe si les lettres(second arguments),
-// correspondent à la fin du mot(premier argument).
-// Si elles correspondent, retournez "La fin est similaire"
-// Sinon "La fin ne correspond pas".
-
+// Créez un Algorithme qui prends un tableau composé de plusieurs tableaux en 
+// argument et qui retourne un seul tableau qui contient la valeur maximale de 
+// chaque tableaux.
 
 // ----------------- CONSEILS -----------------
 
+// Une boucle "for" permet d'itérer dans un tableau.
+// Vous n'êtes pas limité à une boucle "for", vous pouvez en utiliser plusieurs...
 
-// La fonction "slice" permet de découper une chaine de caractère.
-// Essayez cela : 
-// console.log("hello".slice(2));
-
-// La méthode length permet de donner la longueur d'une chaine.
-// Essayez cela :
-// console.log("hello".length);
-
-// Mais il y a des dizaines de façon de résoudre cet algorithme(et les autres...),
-// N'hésitez pas à le faire à votre façon et à TESTER vos idées(c'est important). 
+// la méhode [].push(), pour pousser un élément dans un tableau;
+// Testez :
+// var arrTest = [0,10];
+// arrTest.push(80);
+// console.log(arrTest);
