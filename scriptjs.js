@@ -1,61 +1,46 @@
-function plusGrandNb(arr) {
-   const finalTab = [];
-   for (let index = 0; index < arr.length; index++) {
-    arr[index].sort((b, a) => a-b);
-   
-       
-    }
-      
-    for (let numero = 0; numero < arr.length; numero++) {
-       finalTab.push(arr[numero][0])
-       
-      
-      
-      
-   }
-   
-   return finalTab
-   
+function memeLettres(arr) {
+   let arr0str = arr[0].toString().toLowerCase();
+   let arr1str = arr[1].toString().toLowerCase();
+   let arr0dest = arr0str.split("");
+   let arr1dest = arr1str.split("");
   
+  let tab = [];
+  for (let j = 0; j < arr0dest.length; j++) {
+   tab.push(arr0dest.indexOf(arr1dest[j]));
+  }
+  let tabMot = [];
+  for (let j = 0; j < tab.length; j++) {
+     if (tab[j] > -1) {
+       tabMot.push(tab[j])
+      }
+     
+  }
+  console.log(tabMot);
+  if (tabMot.length === arr1dest.length ) {
+   return true; 
+  }
+  else {
+     return false;
+  }
 }
 
 
 
-console.log(plusGrandNb([
-   [1, 5, 8, 3],
-   [15, 47, 88, 26],
-   [32, 35, 37, 39],
-   [3000, 1001, 857, 1]
- ]));
 
-
-
-
-// let tabounet = [
-//    [1, 5, 8, 3],
-//    [15, 47, 88, 26],
-//    [32, 35, 37, 39],
-//    [3000, 1001, 857, 1]
-//  ];
  
+ 
+ 
+ console.log(memeLettres(["concaupiscednce", "sendas"]));
 
-//  console.log(tabounet[1].sort());
 
+ // ----------------- ÉNONCÉ -----------------
 
-
-// ----------------- ÉNONCÉ -----------------
-
-// Créez un Algorithme qui prends un tableau composé de plusieurs tableaux en 
-// argument et qui retourne un seul tableau qui contient la valeur maximale de 
-// chaque tableaux.
+// Créez un Algorithme qui prends un tableau qui contient deux chaines en parametre.
+// On doit vérifier si la premiere chaine contient au moins une fois toutes les
+// lettres de la seconde, si oui on retourne true, si non on retour false.
 
 // ----------------- CONSEILS -----------------
 
-// Une boucle "for" permet d'itérer dans un tableau.
-// Vous n'êtes pas limité à une boucle "for", vous pouvez en utiliser plusieurs...
-
-// la méhode [].push(), pour pousser un élément dans un tableau;
-// Testez :
-// var arrTest = [0,10];
-// arrTest.push(80);
-// console.log(arrTest);
+// Boucle "for".
+// toLowerCase();
+// indexOf();
