@@ -1,46 +1,31 @@
-function memeLettres(arr) {
-   let arr0str = arr[0].toString().toLowerCase();
-   let arr1str = arr[1].toString().toLowerCase();
-   let arr0dest = arr0str.split("");
-   let arr1dest = arr1str.split("");
+function additionner(arr) {
+  const minimumL = Math.min(...arr);
+  const maximumL = Math.max(...arr);
+  let tab = 0;
+  for (let index = minimumL; index = maximumL; index++) {
+    tab += index;
+    
+  }
   
-  let tab = [];
-  for (let j = 0; j < arr0dest.length; j++) {
-   tab.push(arr0dest.indexOf(arr1dest[j]));
-  }
-  let tabMot = [];
-  for (let j = 0; j < tab.length; j++) {
-     if (tab[j] > -1) {
-       tabMot.push(tab[j])
-      }
-     
-  }
-  console.log(tabMot);
-  if (tabMot.length === arr1dest.length ) {
-   return true; 
-  }
-  else {
-     return false;
-  }
+  
+  return tab;
+  
 }
 
 
 
-
- 
- 
- 
- console.log(memeLettres(["concaupiscednce", "sendas"]));
+console.log(additionner([2, 8]));
 
 
- // ----------------- ÉNONCÉ -----------------
+// 1+2+3+4 = 10
 
-// Créez un Algorithme qui prends un tableau qui contient deux chaines en parametre.
-// On doit vérifier si la premiere chaine contient au moins une fois toutes les
-// lettres de la seconde, si oui on retourne true, si non on retour false.
+// ----------------- ÉNONCÉ -----------------
+
+// Vous recevez un tableau de deux chiffres en entrée, additionnez tous les chiffres 
+// qui se trouvent entre ces deux valeurs.
 
 // ----------------- CONSEILS -----------------
 
 // Boucle "for".
-// toLowerCase();
-// indexOf();
+// Math.max
+// Math.mix
